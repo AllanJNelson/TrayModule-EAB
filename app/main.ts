@@ -86,13 +86,11 @@ try {
 
       if (process.platform === 'win32') {
         tray.on('click', tray.popUpContextMenu);
+        win.setSkipTaskbar(true)
       }
-
-      win = new BrowserWindow({
-        show: false,
-        skipTaskbar: true
-      });
-      // win.setSkipTaskbar(true)
+      // win = new BrowserWindow({
+      //   show: false,
+      // });
       win.loadURL(`file://${__dirname}/index.html`);
 
       const activationShortcut = globalShortcut.register('CommandOrControl+Option+C', () => {
