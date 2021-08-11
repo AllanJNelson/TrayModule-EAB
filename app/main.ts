@@ -79,6 +79,7 @@ try {
   app.on('ready', () => {
     setTimeout(() => {
       createWindow();
+      if (app.dock) app.dock.hide();
       tray = new Tray(path.join(__dirname, getIcon()));
       tray.setPressedImage(path.join(__dirname, 'favicon.png'));
 
