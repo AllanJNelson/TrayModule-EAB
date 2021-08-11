@@ -80,6 +80,7 @@ try {
     setTimeout(() => {
       createWindow();
       if (app.dock) app.dock.hide();
+
       tray = new Tray(path.join(__dirname, getIcon()));
       tray.setPressedImage(path.join(__dirname, 'favicon.png'));
 
@@ -88,9 +89,10 @@ try {
       }
 
       win = new BrowserWindow({
-        show: false
+        show: false,
+        skipTaskbar: true
       });
-
+      // win.setSkipTaskbar(true)
       win.loadURL(`file://${__dirname}/index.html`);
 
       const activationShortcut = globalShortcut.register('CommandOrControl+Option+C', () => {
