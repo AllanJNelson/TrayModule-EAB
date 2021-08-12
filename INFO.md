@@ -8,12 +8,13 @@ Thank you.
 ### My Skype address:
 ``` bash
 live:.cid.c3ed769a833fc6f3
-
-live:rus0228
 ```
+
+
 ### E-mail
 ``` bash
 FilipSn30@outlook.com
-
+```
+``` bash
 rimuisin0228g@gmail.com
 ```
